@@ -8,7 +8,7 @@ amqp.connect('amqp://localhost', (error, connection) => {
             throw err
         }
         var queue = 'task_queue'
-        var msg = process.argv.slice(2).join(' ') || "Hello World!"
+        var msg = process.argv.slice(2).join(' ') || "Hello World from new task!"
 
         channel.assertQueue(queue, {
             durable: true

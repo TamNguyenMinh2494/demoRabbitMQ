@@ -9,7 +9,7 @@ amqp.connect('amqp://localhost', (error, connection) => {
             throw err
         }
         var queue = 'hello'
-        var msg = 'Hello World'
+        var msg = 'Hello World from sender'
         channel.assertQueue(queue, {
             durable: false
         });
